@@ -14,20 +14,18 @@ class LinkedList:
 
     #we introduce a new node pointing to head.
     #Then we assert the new node as the new head.
-    def push(self,new_data):
+    def push(self, new_data):
         new_node      = Node(new_data)
         new_node.next = self.head
         self.head     = new_node
     
     def deleteNode(self, prev_node):
-        if prev_node is 
         if prev_node is None:
             print("The prev. node must be in the LinkedList")
         temp           = prev_node.next
         prev_node.next = temp.next
 
-
-    def insterAfter(self, prev_node, new_data):
+    def insertAfter(self, prev_node, new_data):
         if prev_node is None:
             print("The given prev. node must be in the LinkedList")
             return
@@ -63,7 +61,7 @@ third       = Node(3) #(3   , None)
 l_list.head.next = second #Head   -> second : (1,2) -> (2,none)
 second.next      = third  #second -> third  :  (2,4) -> (3,none)
 
-l_list.insterAfter(second,7)
+l_list.insertAfter(second,7)
 l_list.append(4)
 l_list.printList(),print()
 
